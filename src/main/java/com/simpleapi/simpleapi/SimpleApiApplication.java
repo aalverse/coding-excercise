@@ -26,7 +26,7 @@ public class SimpleApiApplication {
 			// read json and write to db
 			ObjectMapper mapper = new ObjectMapper();
 			TypeReference<List<DogType>> typeReference = new TypeReference<List<DogType>>(){};
-			InputStream inputStream = TypeReference.class.getResourceAsStream("src/main/resources/data/apidata.json");
+			InputStream inputStream = TypeReference.class.getResourceAsStream("/data/apidata.json");
 
 			try {
 				List<DogType> dogs = mapper.readValue(inputStream,typeReference);
